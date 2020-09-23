@@ -17,19 +17,18 @@ namespace ESprojectVCS.Test
         public static IWebDriver driver;
 
         public static A1RimiFirstPage _rimiFirstPage;
+        public static A1RimiFirstPageEN _rimiFirstPageEN;
         public static A2RimiBestSellingProductsPage _rimiBestSellingProductsPage;
         public static A3RimiForOwnBarPage _rimiForOwnBarPage;
-
 
         [OneTimeSetUp]
         public static void SetUp()
         {
             driver = CustomDriver.GetChromeDriver();
             _rimiFirstPage = new A1RimiFirstPage(driver);
+            _rimiFirstPageEN = new A1RimiFirstPageEN(driver);
             _rimiBestSellingProductsPage = new A2RimiBestSellingProductsPage(driver);
             _rimiForOwnBarPage = new A3RimiForOwnBarPage(driver);
-
-
         }
 
         [TearDown]
@@ -39,12 +38,10 @@ namespace ESprojectVCS.Test
                 MyScreenshot.MakeScreeshot(driver);
         }
 
-
-
-/*        [OneTimeTearDown]
+        [OneTimeTearDown]
         public static void TearDown()
         {
             driver.Quit();
-        }*/
+        }
     }
 }

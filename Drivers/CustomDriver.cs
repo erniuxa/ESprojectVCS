@@ -42,7 +42,6 @@ namespace ESprojectVCS.Drivers
                 case Browsers.ChromeIncognito:
                     driver = GetChromeWithOptions();
                     break;
-
             }
 
             driver.Manage().Window.Maximize();
@@ -59,7 +58,5 @@ namespace ESprojectVCS.Drivers
 
             return new ChromeDriver(options);
         }
-
-
     }
 }

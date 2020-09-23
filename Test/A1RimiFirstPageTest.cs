@@ -10,7 +10,7 @@ namespace ESprojectVCS.Test
     public class A1RimiFirstPageTest : BaseTest
     {
         [Order(1)]
-        [TestCase(TestName = "Coockies acceptance")]
+        [TestCase(TestName = "Coockies acceptance [LT menu]")]
         public static void TestAcceptAllCoockies()
         {
             _rimiFirstPage.NavigateToPage().AcceptAllConsents();

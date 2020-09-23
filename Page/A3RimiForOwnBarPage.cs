@@ -22,7 +22,7 @@ namespace ESprojectVCS.Page
         private IWebElement _compareSecondProductText => Driver.FindElement(By.XPath("//*[@id=\"main\"]/section/div[2]/div/aside/div[2]/div[1]/div[1]/div[2]/a"));
         private IWebElement _productPriceEur => Driver.FindElement(By.XPath("//*[@id=\"main\"]/section/div[1]/div/div/section[1]/div/div[1]/div[2]/div[1]/div[1]/span"));
         private IWebElement _productPriceCents => Driver.FindElement(By.XPath("//*[@id=\"main\"]/section/div[1]/div/div/section[1]/div/div[1]/div[2]/div[1]/div[1]/div/sup"));
-        //private IWebElement _compareFirstProductPriceCents => Driver.FindElement(By.XPath("//*[@id=\"main\"]/section/div[2]/div/aside/footer/div[1]/p[2]/span[2]"));
+        
         private IWebElement _compareFirstProductPriceCents => Driver.FindElement(By.XPath("//*[@id=\"main\"]/section/div[2]/div/aside/footer/div[1]/p[3]/span[2]"));
         private IWebElement _deleteAllProductsFromCart => Driver.FindElement(By.XPath("//*[@id=\"main\"]/section/div[2]/div/aside/footer/div[2]/button[2]"));
         private IWebElement _confirmToDeleteAllProductsFromCart => Driver.FindElement(By.XPath("/html/body/div[3]/div/div/form/button[1]"));
@@ -105,11 +105,13 @@ namespace ESprojectVCS.Page
             _deleteAllProductsFromCart.Click();
             return this;
         }
+
         public A3RimiForOwnBarPage ConfirmToDeleteAllProductsFromCart()
         {
             _confirmToDeleteAllProductsFromCart.Click();
             return this;
         }
+
         public A3RimiForOwnBarPage CheckIsCartEmty()
         {
             _checkIsCartEmty.Click();

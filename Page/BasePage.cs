@@ -22,13 +22,9 @@ namespace ESprojectVCS.Page
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(seconds));
             return wait;
         }
-
-
-
-
-/*        public void CloseBrowser()
+        public void CloseBrowser()
         {
             Driver.Quit();
-        }*/
+        }
     }
 }
